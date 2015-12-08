@@ -1,0 +1,75 @@
+$pipe-green: #36802D;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $pipe-green;
+  @include background-image(radial-gradient(rgba(0,0,0,0) 70%, rgba(0,0,0,0.1)));
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  // font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  @include outer-container;
+  height: 100%;
+}
+
+.wrap {
+  @include span-columns(6 of 12);
+  height: 100%;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+  @include pad(2em);
+  img {
+
+  }
+}
+
+.mission-wrap {
+  @include flex-direction(column);
+  @include align-items(flex-start);
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.3em;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  p {
+    font-size: 0.8em;
+  }
+}
+
+
+@include media($mobile) {
+  .wrap {
+    height: auto;
+    @include span-columns(4 of 4);
+  }
+
+  .mission-wrap {
+    @include flex-direction(column);
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

@@ -2,28 +2,18 @@
 layout: default
 ---
 
-<img src="images/pipe-logo.png">
+<div class="container">
+  <div class="logo-wrap wrap">
+    <img src="images/pipe-logo-transparent.svg">
+  </div>
+  <div class="mission-wrap wrap">
+    <h1>Do more, because there's always enough</h1>
 
-<h1>Mission</h1>
-<p>Pipe Internet exists to abundantly improve the information 
-infrastructure of Toledo and Northwest Ohio for all residents and businesses. 
-We seek to do this by offering order of magnitude faster Internet service than
-what is currently available, along with affordable pricing. We hope to 
-reach people of all walks of life and positively alter the course of 
-technology in Toledo while spuring innovation.</p>
-<h3>Pipe: Do more, because there's always enough</h3>
-
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+    <p>Pipe Internet exists to abundantly improve the information
+    infrastructure of Toledo and Northwest Ohio for all residents and businesses.
+    We seek to do this by offering order of magnitude faster Internet service than
+    what is currently available, along with affordable pricing. We hope to
+    reach people of all walks of life and positively alter the course of
+    technology in Toledo while spuring innovation.</p>
+  </div>
 </div>
