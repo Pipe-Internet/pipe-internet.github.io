@@ -17,9 +17,13 @@ img {
   width: 100%;
 }
 
+a {
+  color: inherit;
+}
+
 .container {
   @include outer-container;
-  height: 100%;
+  height: 95vh;
 }
 
 .wrap {
@@ -30,7 +34,10 @@ img {
   @include align-items(center);
   @include pad(2em);
   img {
-
+    height: 360px;
+  }
+  p {
+    margin-top: 0;
   }
 }
 
@@ -49,25 +56,22 @@ img {
 }
 
 footer {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
+  height: 5vh;
+  // padding-bottom: 1em;
   text-align: center;
   p {
     font-size: 0.8em;
+    margin: 0;
+    padding: 0;
   }
 }
 
 
 @include media($mobile) {
   footer {
-    position: static;
-    bottom: auto;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
     p {
       font-size: 0.8em;
+      padding-bottom: 1em;
     }
   }
   
